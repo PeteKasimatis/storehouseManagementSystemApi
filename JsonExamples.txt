@@ -1,0 +1,83 @@
+<--------------- Post Entry Receipt ---------------->
+{
+    "description" : "Ouzo Order",
+    "dateOfEntry" : "2021-7-24",
+    "recipient" : "Petros",
+    "entryRegistrationDTOList" : [
+        {
+            "quantity" : 10,
+            "productBarcode" : "30001",
+            "shelfIdentifier" : "Kyt_1"
+        },
+        {
+            "quantity" : 15,
+            "productBarcode" : "30001",
+            "shelfIdentifier" : "Kyt_2"
+
+        }
+    ]
+}
+
+<--------------- Post Storehouse with shelves -------------->
+{
+    "description": "Storehouse at Kythira",
+    "shelves" : [
+        {
+            "identifier" : "Kit_1"
+        },
+        {
+            "identifier" : "Kyt_2"
+        }
+    ]
+}
+
+<--------------- Put Storehouse with shelves -------------->
+{
+    "id" : 4
+    "description": "Small storehouse at Kythira",
+    "shelves" : [
+        {
+            "identifier" : "Kit_1"
+        }
+    ]
+}
+
+<---------------- Post shelf ------------>
+{
+    "identifier": "Kyt_3",
+    "storehouseId": 3
+}
+
+<-------------- Post Exit Receipt ------------>
+{
+    "reasonForExit" : "Reason 1",
+    "dateOfExit" : "2021-7-19",
+    "sender" : "Spyros",
+    "exitRegistrationDTOList" : [
+        {
+            "quantity" : 5.0,
+            "productBarcode" : "30001",
+            "shelfIdentifier" : "Pir_1"
+        },
+        {
+            "quantity" : 10.0,
+            "productBarcode" : "30001",
+            "shelfIdentifier" : "Pir_1"
+        }
+    ]
+}
+
+
+<---------------- Post product ------------>
+{
+    "description": "Ouzo Plomari",
+    "barcode": "30001",
+    "units": "lt"
+}
+
+
+<-------------- Get stock ----------->
+http://localhost:8080/product//stock/10001/2021-07-24
+
+
+
